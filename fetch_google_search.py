@@ -1,6 +1,7 @@
-from pytrends.request import TrendReq
-import time
 import random
+import time
+
+from pytrends.request import TrendReq
 
 # Random user agents to reduce blocking
 user_agents = [
@@ -21,7 +22,6 @@ pytrends = TrendReq(
 brands = ["Dior", "Givenchy", "Alaia", "Chanel", "Balenciaga"]
 
 timeframe = '2026-03-02 2026-03-14'
-
 
 def fetch_trends(keywords, timeframe):
     """Fetch Google Trends with retry logic"""
