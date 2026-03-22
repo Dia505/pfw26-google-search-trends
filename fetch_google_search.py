@@ -19,7 +19,7 @@ pytrends = TrendReq(
     requests_args={'headers': {'User-Agent': random.choice(user_agents)}}
 )
 
-brands = ["Dior", "Givenchy", "Alaia", "Chanel", "Balenciaga"]
+brands = ["Dior", "Alaia", "Chanel", "Balenciaga"]
 
 timeframe = '2026-03-02 2026-03-14'
 
@@ -41,7 +41,7 @@ def fetch_trends(keywords, timeframe):
         except Exception as e:
             print("Error:", e)
 
-        sleep_time = random.randint(10, 20)
+        sleep_time = random.randint(60, 120)
         print(f"Sleeping {sleep_time}s before retry...")
         time.sleep(sleep_time)
 

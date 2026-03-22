@@ -6,7 +6,7 @@ data = pd.read_csv("google_search_trends.csv", index_col=0, parse_dates=True)
 
 # Calculation of spike threshold for a 3-day window period
 spike = {}
-brands = ["Dior", "Alaia", "Givenchy", "Balenciaga", "Chanel"]
+brands = ["Dior", "Alaia", "Balenciaga", "Chanel"]
 for brand in brands:
     rolling_mean = data[brand].rolling(3).mean()
     rolling_std = data[brand].rolling(3).std()
@@ -19,7 +19,6 @@ print(spike_df)
 show_dates = {
     "Dior": "2026-03-03",
     "Alaia": "2026-03-04",
-    "Givenchy": "2026-03-06",
     "Balenciaga": "2026-03-07",
     "Chanel": "2026-03-09"
 }
